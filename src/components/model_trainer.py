@@ -16,6 +16,7 @@ from xgboost import XGBRegressor
 
 from sklearn.metrics import r2_score
 
+from src.config.paths import MODEL_PATH
 from src.exception import CustomException
 from src.logger import logging
 from src.utils import save_object, evaluate_models
@@ -23,7 +24,7 @@ from src.utils import save_object, evaluate_models
 
 @dataclass
 class ModelTrainerConfig:
-    trained_model_file_path = os.path.join("artifacts", "model.pkl")
+    trained_model_file_path: str = MODEL_PATH
 
 
 class ModelTrainer:
@@ -42,12 +43,12 @@ class ModelTrainer:
             models = {
                 "Linear Regression": LinearRegression(),
                 "KNeighbors Regressor": KNeighborsRegressor(),
-                "Decision Tree": DecisionTreeRegressor(),
-                "RandomForest Regressor": RandomForestRegressor(),
-                "Gradient Boosting": GradientBoostingRegressor(),
-                "XGB Regressor": XGBRegressor(),
-                "CatBoost Regressor": CatBoostRegressor(),
-                "AdaBoost Regressor": AdaBoostRegressor()
+                "Decision Tree": DecisionTreeRegressor(random_state=42),
+                "RandomForest Regressor": RandomForestRegressor(random_state=42),
+                "Gradient Boosting": GradientBoostingRegressor(random_state=42),
+                "XGB Regressor": XGBRegressor(random_state=42, verbosity=0),
+                "CatBoost Regressor": CatBoostRegressor(random_state=42),
+                "AdaBoost Regressor": AdaBoostRegressor(random_state=42)
             }
             # for hyper param tuning
             param_distributions = {
@@ -109,7 +110,8 @@ class ModelTrainer:
              
             model_report: dict = evaluate_models(
                 X_train, y_train, X_test, y_test, 
-                models=models, param_distributions=param_distributions
+                models=models, 
+                param_distributions=param_distributions
                 )
 
             best_model_score = max(model_report.values())

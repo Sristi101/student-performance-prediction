@@ -54,6 +54,7 @@ def evaluate_models(X_train, y_train, X_test, y_test, models, param_distribution
 
             report[model_name] = test_model_score
             models[model_name] = best_model
+            
             logging.info(
                             f"{model_name} Train Score: {train_model_score:.4f}, "
                             f"Test Score: {test_model_score:.4f}"
@@ -61,5 +62,13 @@ def evaluate_models(X_train, y_train, X_test, y_test, models, param_distribution
 
         return report
 
+    except Exception as e:
+        raise CustomException(e, sys)
+
+def load_object(file_path):
+    try:
+        with open(file_path, 'rb') as file_obj:
+            return dill.load(file_obj)
+        
     except Exception as e:
         raise CustomException(e, sys)

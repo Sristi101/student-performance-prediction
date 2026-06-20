@@ -9,13 +9,15 @@ from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
+from src.config.paths import PREPROCESSOR_PATH
 from src.exception import CustomException
 from src.logger import logging 
 from src.utils import save_object
 
+
 @dataclass
 class DataTransformationConfig:
-    preprocessor_obj_file_path = os.path.join('artifacts', "preprocessor.pkl")
+    preprocessor_obj_file_path = PREPROCESSOR_PATH
 
 
 class DataTransformation:
@@ -30,21 +32,22 @@ class DataTransformation:
                 "gender",
                 "race/ethnicity",
                 "parental level of education",
+                "lunch",
                 "test preparation course"
             ]
 
             num_pipeline = Pipeline(
                 steps=[
-                    ("Imputer", SimpleImputer(strategy="median")),
-                    ("Scaler", StandardScaler()), 
+                    ("imputer", SimpleImputer(strategy="median")),
+                    ("scaler", StandardScaler()), 
                 ]
             )
 
             cat_pipeline = Pipeline(
                 steps=[
-                    ("Imputer", SimpleImputer(strategy="most_frequent")),
-                    ("OH", OneHotEncoder()),
-                    ("Scaler", StandardScaler(with_mean=False))
+                    ("imputer", SimpleImputer(strategy="most_frequent")),
+                    ("encoder", OneHotEncoder()),
+                    ("scaler", StandardScaler(with_mean=False))
                 ]
             )
 

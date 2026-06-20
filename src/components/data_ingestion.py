@@ -11,6 +11,12 @@ import sys
 
 # so i need project root to Python path
 sys.path.insert(0, os.path.abspath(os.path.dirname(__file__) + '/../..'))
+
+from src.config.paths import (
+    TRAIN_DATA_PATH,
+    TEST_DATA_PATH,
+    RAW_DATA_PATH
+)
 from src.exception import CustomException
 from src.logger import logging
 
@@ -26,9 +32,9 @@ from src.components.model_trainer import ModelTrainerConfig
 
 @dataclass
 class DataIngestionConfig:
-    train_data_path: str = os.path.join('artifacts', 'train.csv')
-    test_data_path: str = os.path.join('artifacts', 'test.csv')
-    raw_data_path: str = os.path.join('artifacts', 'data.csv')
+    train_data_path: str = TRAIN_DATA_PATH
+    test_data_path: str = TEST_DATA_PATH
+    raw_data_path: str = RAW_DATA_PATH
 
 
 class DataIngestion:
