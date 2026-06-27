@@ -1,0 +1,241 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 40px 20px;
+  background: #f4f6f9;
+  color: #1a1d29;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Header ---------- */
+
+.header {
+  max-width: 640px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #4f46e5;
+  background: #eef0fd;
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+.header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: #1a1d29;
+}
+
+.header h1 span {
+  color: #4f46e5;
+}
+
+.header p {
+  font-size: 15px;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* ---------- Card ---------- */
+
+.card {
+  max-width: 640px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e2e5ea;
+  border-radius: 10px;
+  box-shadow:
+    0 1px 2px rgba(16, 24, 40, 0.04),
+    0 1px 3px rgba(16, 24, 40, 0.06);
+  padding: 32px;
+}
+
+/* ---------- Section labels & layout ---------- */
+
+.section-label {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #9aa1ac;
+  margin-bottom: 14px;
+}
+
+.divider {
+  height: 1px;
+  background: #e2e5ea;
+  margin: 26px 0;
+}
+
+.field-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.field-group.full {
+  grid-template-columns: 1fr;
+}
+
+.field-group:last-of-type {
+  margin-bottom: 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Form elements ---------- */
+
+label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1d29;
+  margin-bottom: 6px;
+}
+
+select,
+input[type="number"] {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #1a1d29;
+  background: #ffffff;
+  border: 1px solid #e2e5ea;
+  border-radius: 6px;
+  outline: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+  appearance: none;
+}
+
+select {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+select:focus,
+input[type="number"]:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px #eef0fd;
+}
+
+select:invalid {
+  color: #9aa1ac;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  opacity: 0.4;
+}
+
+.score-hint {
+  font-size: 12px;
+  color: #9aa1ac;
+  margin-top: 5px;
+}
+
+/* ---------- Submit button ---------- */
+
+.submit-btn {
+  width: 100%;
+  margin-top: 28px;
+  padding: 13px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #4f46e5;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    transform 0.05s ease;
+}
+
+.submit-btn:hover {
+  background: #4338ca;
+}
+
+.submit-btn:active {
+  transform: scale(0.99);
+}
+
+/* ---------- Result box ---------- */
+
+.result-box {
+  margin-top: 28px;
+  padding: 24px;
+  text-align: center;
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 10px;
+}
+
+.result-label {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #16a34a;
+  margin-bottom: 8px;
+}
+
+.result-score {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1a1d29;
+  line-height: 1;
+}
+
+.result-sub {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 8px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 560px) {
+  .card {
+    padding: 22px;
+  }
+
+  .field-group {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .header h1 {
+    font-size: 24px;
+  }
+
+  .result-score {
+    font-size: 34px;
+  }
+}
