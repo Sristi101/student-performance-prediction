@@ -1,0 +1,7 @@
+services:
+ -type: web
+ name: student-performance-prediction
+ dockerfilePath: ./Dockerfile
+ plan: free
+ autoDeploy: true
+ healthCheckPath: /
