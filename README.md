@@ -153,13 +153,13 @@ http://127.0.0.1:5000
 ### Build image
 
 ```bash
-docker build -t student-performance-app .
+docker build -t student-performance-prediction .
 ```
 
 ### Run container
 
 ```bash
-docker run -p 5000:5000 student-performance-app
+docker run -p 5000:5000 student-performance-prediction
 ```
 
 ---
