@@ -1,12 +1,12 @@
 ## End to End Machine Learning Project
 
-# 🎓 Student Performance Prediction (ML Web App)
+# Student Performance Prediction (ML Web App)
 
 A machine learning web application that predicts student performance based on demographic and academic inputs. The project is deployed using **Flask, Docker, and Render**, demonstrating an end-to-end ML deployment pipeline.
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 
 👉 https://student-performance-prediction-yc2o.onrender.com/predict
 
@@ -14,7 +14,7 @@ A machine learning web application that predicts student performance based on de
 
 ## 🖥️ Application Preview
 
-### 🏠 Home Page
+### Home Page
 
 ![Home Page](static/screenshots/home.png)
 
@@ -22,13 +22,13 @@ A machine learning web application that predicts student performance based on de
 
 ![Form Page](static/screenshots/form.png)
 
-### 🎯 Prediction Result
+### Prediction Result
 
 ![Result](static/screenshots/result.png)
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 This project predicts a student's performance score based on features such as:
 
@@ -44,7 +44,7 @@ The model is trained using regression algorithms and deployed as a web applicati
 
 ---
 
-## 🧠 Machine Learning Pipeline
+## Machine Learning Pipeline
 
 ```
 User Input (Web Form)
@@ -60,7 +60,7 @@ Prediction Output
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### 🔹 Backend
 
@@ -193,7 +193,7 @@ The project is deployed using **Render** with Docker support.
 
 ---
 
-## 📌 Future Improvements
+## Future Improvements
 
 - Add model explainability (SHAP)
 - Switch to FastAPI for higher performance
