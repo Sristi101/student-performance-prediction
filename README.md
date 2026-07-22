@@ -8,17 +8,17 @@ A machine learning web application that predicts student performance based on de
 
 ## Live Demo
 
-👉 https://student-performance-prediction-yc2o.onrender.com/predict
+ https://student-performance-prediction-yc2o.onrender.com/predict
 
 ---
 
-## 🖥️ Application Preview
+## Application Preview
 
 ### Home Page
 
 ![Home Page](static/screenshots/home.png)
 
-### 📊 Prediction Form
+### Prediction Form
 
 ![Form Page](static/screenshots/form.png)
 
@@ -175,7 +175,7 @@ The project is deployed using **Render** with Docker support.
 
 ---
 
-## 📊 Model Performance
+## Model Performance
 
 - Regression-based ML model
 - Trained on student performance dataset
