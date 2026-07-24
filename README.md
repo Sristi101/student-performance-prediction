@@ -4,13 +4,13 @@
 
 A machine learning web application that predicts student performance based on demographic and academic inputs. The project is deployed using **Flask, Docker, and Render**, demonstrating an end-to-end ML deployment pipeline.
 
----
+
 
 ## Live Demo
 
  https://student-performance-prediction-yc2o.onrender.com/predict
 
----
+
 
 ## Application Preview
 
@@ -26,7 +26,7 @@ A machine learning web application that predicts student performance based on de
 
 ![Result](static/screenshots/result.png)
 
----
+
 
 ## Project Overview
 
@@ -42,7 +42,7 @@ This project predicts a student's performance score based on features such as:
 
 The model is trained using regression algorithms and deployed as a web application for real-time predictions.
 
----
+
 
 ## Machine Learning Pipeline
 
@@ -58,7 +58,7 @@ Trained ML Model
 Prediction Output
 ```
 
----
+
 
 ## Tech Stack
 
@@ -82,7 +82,7 @@ Prediction Output
 - Docker
 - Render
 
----
+
 
 ## 📁 Project Structure
 
@@ -110,7 +110,7 @@ Prediction Output
 └── setup.py                   # Package configuration for local module imports
 ```
 
----
+
 
 ## ⚙️ How to Run Locally
 
@@ -163,7 +163,7 @@ docker build -t student-performance-prediction .
 docker run -p 5000:5000 student-performance-prediction
 ```
 
----
+
 
 ## 🌐 Deployment
 
@@ -173,7 +173,7 @@ The project is deployed using **Render** with Docker support.
 - Containerized using Docker
 - Production server: Gunicorn
 
----
+
 
 ## Model Performance
 
@@ -181,7 +181,7 @@ The project is deployed using **Render** with Docker support.
 - Trained on student performance dataset
 - Optimized preprocessing pipeline for categorical + numerical features
 
----
+
 
 ## Key Features
 
@@ -191,7 +191,7 @@ The project is deployed using **Render** with Docker support.
 - Cloud deployment (Render)
 - Modular code structure
 
----
+
 
 ## Future Improvements
 
@@ -201,7 +201,7 @@ The project is deployed using **Render** with Docker support.
 - Add database logging for predictions
 - Improve UI using Bootstrap
 
----
+
 
 ## Author
 
